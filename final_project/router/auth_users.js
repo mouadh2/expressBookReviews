@@ -33,11 +33,6 @@ regd_users.post("/login", (req,res) => {
 
 // Add a book review
 regd_users.put("/auth/review/:isbn", (req, res) => {
-  const review = req.query.review;
-  const auth = jsonwebtoken.verify(username, "acccess");;
-  const isbn = req.params.isbn;
-  books.push({isbn:{"reviews":review}});
-  return res.send(JSON.stringify(books,null,4));
 });
 
 module.exports.authenticated = regd_users;
